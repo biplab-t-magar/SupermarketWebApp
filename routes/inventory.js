@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET inventory page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.sendfile('./public/inventory.html');
 });
 
 module.exports = router;
