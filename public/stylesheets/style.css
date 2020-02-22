@@ -8,11 +8,12 @@ a {
 }
 
 .list-group-item {
-  background-color: gainsboro;
+  background-color: lightgray;
 }
 
 .list-group-item.aisles {
   cursor: pointer;
+  margin: 2px;
 }
 
 .list-group-item.aisles:hover {
