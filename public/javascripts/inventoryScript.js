@@ -7,7 +7,7 @@ let aisleListContainer = document.querySelector("ul.list-group");
 let jsonData = [
     {
         "Aisle": "Aisle  1 - Organics",
-        "Amount": 1,
+        "Amount": 5,
         "AmountSold": 12,
         "Manufacturer": "Mickeys and Co.",
         "Name": "Cheese",
@@ -18,7 +18,7 @@ let jsonData = [
     },
     {
         "Aisle": "Aisle  1 - Organics",
-        "Amount": 20,
+        "Amount": 2,
         "AmountSold": 2,
         "Manufacturer": "Charle's Farm",
         "Name": "Potatoes",
