@@ -1,0 +1,18 @@
+[
+	{
+		"Manufacturer": "Some Manufacturer\n",
+		"Name": "Skim Milk",
+		"Row": 3,
+		"Shelf": 2,
+		"Stock Remaining": "19",
+		"Unit": "Containers"
+	},
+	{
+		"Manufacturer": "Some farmer",
+		"Name": "Banana",
+		"Row": 2,
+		"Shelf": 5,
+		"Stock Remaining": "13",
+		"Unit": "Pounds"
+	}
+]
