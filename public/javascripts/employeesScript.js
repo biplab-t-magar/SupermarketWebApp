@@ -32,28 +32,28 @@ let employeeArray = [
         "Age" : 40,
         "Year Joined": 2001,
         "Bio" : "I've spent half of my life working in this store",
-        "img" : "./images/amy.jpg"
+        "img" : "./images/amy.jpeg"
     },
     {
         "Name" : "Patricia",
         "Age" : 28,
         "Year Joined": 2017,
         "Bio" : "I love working at NJ Grocery Store. I joined my wonderful team four years ago and I've enjoyed every second of it!!!",
-        "img" : "./images/patricia.jpg"
+        "img" : "./images/patricia.jpeg"
     },
     {
         "Name" : "Mike",
         "Age" : 30,
         "Year Joined": 2014,
         "Bio" : "I have a motorcycle that I ride to work everyday",
-        "img" : "./images/mike.jpg"
+        "img" : "./images/mike.jpeg"
     },
     {
         "Name" : "Kaylah",
         "Age" : 20,
         "Year Joined": 2018,
         "Bio" : "I am the youngest worker in this store",
-        "img" : "./images/kaylah.jpg"
+        "img" : "./images/kaylah.jpeg"
     },
     {
         "Name" : "Bree",
@@ -75,6 +75,21 @@ employeeArray.forEach(function(item, index) {
     img.setAttribute("src", item.img);
     img.setAttribute("alt", "Card image cap");
     containerDiv.appendChild(img);
-    
+    let bodyDiv = document.createElement('div');
+    bodyDiv.classList.add("card-body");
+    containerDiv.appendChild(bodyDiv);
+    let headerDiv = document.createElement('h5');
+    headerDiv.classList.add("card-title");
+    headerDiv.innerHTML = item.Name;
+    bodyDiv.appendChild(headerDiv);
+    let descriptionDiv = document.createElement('p');
+    descriptionDiv.classList.add("card-text");
+    descriptionDiv.innerHTML=item.Bio;
+    bodyDiv.appendChild(descriptionDiv);
+    let link = document.createElement('a');
+    link.className = "btn btn-primary";
+    link.setAttribute("href", "#");
+    link.innerHTML = item.Name + "'s Profile";  
+    bodyDiv.appendChild(link);  
 });
 
