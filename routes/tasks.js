@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET employees page. */
 router.get('/', function(req, res, next) {
-  res.sendfile('./public/task.html');
+  res.sendfile('./public/tasks.html');
 });
 
 module.exports = router;
