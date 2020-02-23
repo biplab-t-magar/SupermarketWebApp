@@ -7,13 +7,14 @@ let aisleListContainer = document.querySelector("ul.list-group");
 let jsonData = [
     {
         "Aisle": "Aisle  1 - Organics",
-        "Amount": 15,
+        "Amount": 1,
         "AmountSold": 12,
         "Manufacturer": "Mickeys and Co.",
         "Name": "Cheese",
         "Row": 9,
         "Shelf": 3,
-        "Unit": "Number"
+        "Unit": "Number",
+        "Threshold" : "3"
     },
     {
         "Aisle": "Aisle  1 - Organics",
@@ -23,7 +24,8 @@ let jsonData = [
         "Name": "Potatoes",
         "Row": 3,
         "Shelf": 5,
-        "Unit": "lb"
+        "Unit": "lb",
+        "Threshold" : "4"
     },
     {
         "Aisle": "Aisle 1  - Organics",
@@ -33,7 +35,8 @@ let jsonData = [
         "Name": "Tomatoes",
         "Row": 4,
         "Shelf": 7,
-        "Unit": "lb"
+        "Unit": "lb",
+        "Threshold" : "10"
     },
     {
         "Aisle": "Aisle 1 - Organics",
@@ -43,7 +46,8 @@ let jsonData = [
         "Name": "Broccoli",
         "Row": 2,
         "Shelf": 6,
-        "Unit": "Number"
+        "Unit": "Number",
+        "Threshold" : "8"
     }
 ]
 
@@ -117,13 +121,24 @@ function showAisleItems(event) {
         
 
         jsonData.forEach(function(item, index) {
-            addColumnDiv(item.Name, columns, 1, index + 2);
-            addColumnDiv(item.Manufacturer, columns, 2, index + 2);
-            addColumnDiv(item.Shelf, columns, 3, index + 2);
-            addColumnDiv(item.Row, columns, 4, index + 2);
-            addColumnDiv(item.Unit, columns, 5, index + 2);
-            addColumnDiv(item.Amount, columns, 6, index + 2);
-            addColumnDiv(item.AmountSold, columns, 7, index + 2);
+            if(item.Threshold > item.Amount) {
+                addColumnDiv(item.Name, columns, 1, index + 2).style.color="red";
+                addColumnDiv(item.Manufacturer, columns, 2, index + 2).style.color="red";
+                addColumnDiv(item.Shelf, columns, 3, index + 2).style.color="red";
+                addColumnDiv(item.Row, columns, 4, index + 2).style.color="red";
+                addColumnDiv(item.Unit, columns, 5, index + 2).style.color="red";
+                addColumnDiv(item.Amount, columns, 6, index + 2).style.color="red";
+                addColumnDiv(item.AmountSold, columns, 7, index + 2).style.color="red";
+            } else {
+                addColumnDiv(item.Name, columns, 1, index + 2);
+                addColumnDiv(item.Manufacturer, columns, 2, index + 2);
+                addColumnDiv(item.Shelf, columns, 3, index + 2);
+                addColumnDiv(item.Row, columns, 4, index + 2);
+                addColumnDiv(item.Unit, columns, 5, index + 2);
+                addColumnDiv(item.Amount, columns, 6, index + 2);
+                addColumnDiv(item.AmountSold, columns, 7, index + 2);
+            }
+            
         });
         
         let items = document.createElement('div');
