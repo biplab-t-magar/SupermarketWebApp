@@ -4,9 +4,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var inventoryRouter = require('./routes/inventory');
 var employeeRouter = require('./routes/employees');
+var taskRouter = require('./routes/task');
 
 var app = express();
 
@@ -19,6 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/inventory', inventoryRouter);
 app.use('/employees', employeeRouter)
-app.use('/users', usersRouter);
+app.use('/task', taskRouter)
 
 module.exports = app;

@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET employees page. */
 router.get('/', function(req, res, next) {
-  res.sendfile('./public/employee.html');
+  res.sendfile('./public/task.html');
 });
 
 module.exports = router;
