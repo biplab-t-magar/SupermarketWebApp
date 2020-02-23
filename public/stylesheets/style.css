@@ -7,14 +7,15 @@ a {
   color: #00B7FF;
 }
 
-.list-group-item {
-  background-color: gainsboro;
-}
-
 .list-group-item.aisles {
   cursor: pointer;
+  margin: 2px;
+  transition: 0.5s;
 }
 
 .list-group-item.aisles:hover {
-  border: solid gray;
+  background-color: lightpink;
 }
+
+
+
