@@ -1,6 +1,6 @@
 # SupermarketWebApp
 
-An supermarker app our team made at HackHers 2020.
+A supermarker app our team made at HackHers 2020.
 
 This is a web app that helps managers and customers at supermarkets.
 
@@ -10,4 +10,4 @@ Features
   - Allow the manager to assign a task to the employee and for the employee to see it.
   
 Made With
-  - Nodejs, Bootstrap, Express, Passport, MongoDb.
+  - Nodejs, Bootstrap, Express, Passport, MongoDB.
